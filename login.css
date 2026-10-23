@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px 50px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+img {
+    width: 60%;
+    animation: move 5s infinite;
+}
+
+.loginContainer {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: all 500ms;
+    font-family: sans-serif;
+}
+
+.loginContainer:hover {
+    padding: 30px;
+    background-color: whitesmoke;
+    border-radius: 30px;
+}
+
+h1 {
+    letter-spacing: -12%;
+    font-weight: 900;
+}
+
+input,
+button {
+    letter-spacing: -12%;
+    font-weight: 900;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+input:active,
+button:active {
+    scale: 90%;
+}
+
+input:hover,
+button:hover {
+    opacity: 50%;
+}
+
+@keyframes move {
+    0% {
+        scale: 100%;
+    }
+
+    50% {
+        scale: 90%;
+    }
+
+    100% {
+        scale: 100%;
+    }
+}
+
+.loginButton {
+    background-color: black;
+    color: white;
+}
+
+.forgotButton {
+    background-color: gray;
+    color: white;
+}
+
+.active {
+    box-shadow: 0px 0px 10px 0px lightgray;
+}
+
+@media (max-width:768px) {
+    section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .loginContainer {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    img {
+        width: 100%;
+    }
+}
